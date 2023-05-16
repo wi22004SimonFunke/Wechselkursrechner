@@ -6,8 +6,7 @@ import org.json.JSONObject;
 public class CurrencyConverter {
 
 
-
-    public static void main(String[] args) {
+ public static void main(String[] args) {
  Scanner scanner = new Scanner(System.in);
 
 
@@ -46,15 +45,13 @@ public class CurrencyConverter {
 
  public static double getConversionRate(String sourceCurrency, String targetCurrency) {
  try {
- String apiKey = "DEIN_API_KEY"; // Hier deinen API-Schlüssel einfügen
-
+ String apiKey = "69uwA1AY09LmliVKV6OSxmwCfig3xId1";
 
 
  String url = "https://api.exchangeratesapi.io/latest?base=" + sourceCurrency + "&symbols=" + targetCurrency;
  URL apiUrl = new URL(url);
  HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
  connection.setRequestMethod("GET");
-
 
 
  // Überprüfung der API-Antwort
@@ -64,6 +61,8 @@ public class CurrencyConverter {
  String jsonText = scanner.useDelimiter("\\A").next();
  scanner.close();
 
+  // print JSON answer
+  System.out.println("JSON Response: " + jsonText);
 
   // Verarbeitung der JSON-Antwort
 JSONObject jsonObject = new JSONObject(jsonText);
@@ -81,19 +80,7 @@ JSONObject jsonObject = new JSONObject(jsonText);
  return 0.0;
  }
  }
-
-
-
-        public static double convertCurrency(double amount, double conversionRate) {
+ public static double convertCurrency(double amount, double conversionRate) {
  return amount * conversionRate;
  }
     }
-
-
-
-
-
-
-
-
-}
