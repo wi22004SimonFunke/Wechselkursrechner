@@ -12,6 +12,6 @@ public class Main {
         CurrencyConverter CurrencyConverter1 = new CurrencyConverter();
         double targetCurrencyAmount = CurrencyConverter1.Convert(amount, rate);
 
-        System.out.println("amount"+" "+currencies[0]+" entspricht aktuell "+targetCurrencyAmount+currencies[1]);
+        System.out.println(amount+" "+currencies[0]+" entspricht aktuell "+targetCurrencyAmount+" "+currencies[1]);
     }
 }
