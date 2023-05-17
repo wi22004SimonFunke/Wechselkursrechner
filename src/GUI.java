@@ -65,4 +65,5 @@ public class GUI extends JFrame {
         return amount;
     }
 
+    RatesFetcher RatesFetcher1 = new RatesFetcher();
     }
