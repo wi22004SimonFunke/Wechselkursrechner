@@ -11,13 +11,15 @@ public class GUI extends JFrame {
     private String quoteCurrency;
     private double amount;
 
+    String[] currencies = {"EUR", "USD", "GBP"};
+
     public GUI() {
         setTitle("Currency Converter");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
 
         // Create and populate the currency dropdown menus
-        String[] currencies = {"EUR", "USD", "GBP"};
+
         baseCurrencyComboBox = new JComboBox<>(currencies);
         quoteCurrencyComboBox = new JComboBox<>(currencies);
 
@@ -64,6 +66,4 @@ public class GUI extends JFrame {
     public double getAmount() {
         return amount;
     }
-
-    RatesFetcher RatesFetcher1 = new RatesFetcher();
     }

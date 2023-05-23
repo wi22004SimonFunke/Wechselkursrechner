@@ -6,11 +6,13 @@ import org.json.JSONObject;
 
 public class RatesFetcher {
 
+    private String endpoint;
+    int responseCode;
     public double getExchangeRate(String baseCurrency, String targetCurrency) {
-        String endpoint = "https://api.exchangerate-api.com/v4/latest/" + baseCurrency;
+        endpoint = "https://api.exchangerate-api.com/v4/latest/" + baseCurrency;
 
         try {
-            // Create a URL object with the API endpoint
+            // Create an URL object with the API endpoint
             URL url = new URL(endpoint);
 
             // Create an HttpURLConnection object and open a connection
@@ -18,7 +20,7 @@ public class RatesFetcher {
             connection.setRequestMethod("GET");
 
             // Get the response code
-            int responseCode = connection.getResponseCode();
+            responseCode = connection.getResponseCode();
 
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 // Read the response using a BufferedReader

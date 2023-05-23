@@ -1,7 +1,8 @@
-public class CurrencyConverter{
+public class Converter {
+    private double targetCurrencyAmount;
     public double Convert(double amount,double rate){
 
-        double targetCurrencyAmount;
+
         targetCurrencyAmount = amount*rate;
         return targetCurrencyAmount;
 
